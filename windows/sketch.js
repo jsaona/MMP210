@@ -1,5 +1,3 @@
-var x=200;
-
 function setup() {
     createCanvas(800, 600);
 }
@@ -9,26 +7,28 @@ function draw() {
     stroke(0);
     strokeWeight(3);
     
-  
-    fill("blue");
-    rect(x, 150, 100, 100);
-    fill("blue");
-    rect(300, 250, 100, 100);
-    fill("skyblue");
-    rect(200, 250, 100, 100);
+    var columnSize = width/4;
+	var rowSize = height/3;
+	for (var x = 50; x <= width; x += columnSize) {
+		for (var y = 50; y <= height; y += rowSize) {
+			
+            fill("blue");
+            rect(x, y, 50, 50);
+            fill("blue");
+            rect(x + 50, y + 50, 50, 50);
+            fill("skyblue");
+            rect(x, y + 50, 50, 50);
+
+            rect(x+50, y, 50, 50);
+
+
+            fill("black");
+            /*bottom*/
+            rect(x-10, y+100, 120, 7);
+            /*Top*/
+            rect(x-10, y, 120, 7); 
+			
+		}
+	}
     
-    rect(300, 150, 100, 100);
-    
-    rect(300, 350, 100, 100);
-    fill("blue");
-    rect(200, 350, 100, 100);
-    fill("black");
-    /*bottom*/
-    rect(190, 450, 220, 15);
-    /*Top*/
-    rect(190, 135, 220, 15);
-    
-    
-    
-   
 }

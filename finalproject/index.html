@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <title>MMP 210 Homepage</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+</head>
+
+<body id="home">
+    <h1>Final Project</h1>
+    <ul>
+        
+        <li class="link"><a href="../index.html">Home</a></li>
+        <p>press SPACE to jump</p>
+    </ul>
+    
+    <script src="p5.min.js"></script>
+    <script src="pipe.js"></script> 
+    <script src="bird.js"></script>  
+    <script src="p5.dom.min.js"></script>
+    <script src="p5.sound.js"></script>
+    <script src="sketch.js"></script>
+    
+
+    <script>        
+        let stateCheck = setInterval(() => {
+          if (document.readyState === 'complete') {
+            clearInterval(stateCheck);
+            // document ready
+            document.getElementsByTagName('button')[0].addEventListener('click', function() {
+                window.location.reload();
+            });
+          }
+        }, 1000);
+    </script>
+
+</body>
+
+</html>
